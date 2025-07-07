@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Happy Birthday Mahi 🎉</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: linear-gradient(135deg, #ffe0f0, #fceaff);
       font-family: 'Segoe UI', sans-serif;
@@ -18,7 +22,16 @@
       font-size: 3rem;
       color: #ff3e96;
       margin-bottom: 20px;
-      animation: fadeIn 2s ease-out;
+      animation: glow 2s ease-in-out infinite alternate, fadeIn 2s ease-out;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+      }
+      to {
+        text-shadow: 0 0 20px #ff1493, 0 0 30px #ff1493;
+      }
     }
 
     p {
@@ -34,6 +47,28 @@
       animation: fadeIn 3s ease-in-out;
     }
 
+    .btn-container {
+      margin: 20px 0 40px;
+    }
+
+    .btn {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 25px;
+      margin: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #ff1493;
+      transform: scale(1.05);
+    }
+
     audio {
       margin-top: 30px;
     }
@@ -44,6 +79,7 @@
       justify-content: center;
       gap: 15px;
       margin-top: 30px;
+      padding-bottom: 40px;
     }
 
     .gallery img {
@@ -59,7 +95,6 @@
       transform: scale(1.07);
     }
 
-    /* Floating hearts (CSS only) */
     .hearts {
       position: fixed;
       top: 0;
@@ -99,6 +134,7 @@
       h1 { font-size: 2rem; }
       p { font-size: 1.1rem; }
       .gallery img { width: 120px; height: 120px; }
+      .btn { font-size: 0.9rem; padding: 10px 20px; }
     }
   </style>
 </head>
@@ -116,6 +152,11 @@
     But I’m glad you happened.<br><br>
     Stay the way you are… complicated, kind, and unforgettable.
   </p>
+
+  <div class="btn-container">
+    <button class="btn" onclick="document.querySelector('.gallery').scrollIntoView({ behavior: 'smooth' })">📷 View Photos</button>
+    <button class="btn" onclick="document.querySelector('audio').currentTime = 0">🔁 Replay Song</button>
+  </div>
 
   <audio controls autoplay loop>
     <source src="voice.mp3" type="audio/mpeg">
