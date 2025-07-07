@@ -6,12 +6,12 @@
   <title>Happy Birthday Mahi 🎉</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #ffe0f0, #fceaff);
-      overflow-x: hidden;
-      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
       padding: 40px 20px;
+      text-align: center;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -34,6 +34,10 @@
       animation: fadeIn 3s ease-in-out;
     }
 
+    audio {
+      margin-top: 30px;
+    }
+
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -53,23 +57,6 @@
 
     .gallery img:hover {
       transform: scale(1.07);
-    }
-
-    audio {
-      margin-top: 30px;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      h1 { font-size: 2rem; }
-      p { font-size: 1.1rem; }
-      .gallery img { width: 120px; height: 120px; }
     }
 
     /* Floating hearts (CSS only) */
@@ -98,9 +85,20 @@
       animation-delay: 5s;
     }
 
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     @keyframes floatHearts {
       0% { transform: translateY(100%) translateX(0); }
       100% { transform: translateY(-100%) translateX(20px); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1.1rem; }
+      .gallery img { width: 120px; height: 120px; }
     }
   </style>
 </head>
@@ -111,10 +109,12 @@
   <h1>Happy Birthday Mahi 🎂</h1>
 
   <p>
-    Hello, you. You probably don't even realize what today means to someone who knows you but I don't.<br><br>
-    It's not just your birthday, Mahi. It's the day the world got someone irreplaceable.<br><br>
-    You shine effortlessly, you look like you have been never hurt, and care like no one ever taught you to stop.<br><br>
-    So happy birthday, Mahi. I hope this small wish from a kite admirer brings a smile to the one who makes smiling feel easy.
+    Happy Birthday, Mahi...<br><br>
+    Funny, isn’t it? How one day suddenly means more than the rest.<br><br>
+    It’s not about cakes or wishes, it’s about you… existing, making this world softer just by being in it.<br><br>
+    I don’t know if the universe planned it, or if it was just a beautiful accident.<br><br>
+    But I’m glad you happened.<br><br>
+    Stay the way you are… complicated, kind, and unforgettable.
   </p>
 
   <audio controls autoplay loop>
